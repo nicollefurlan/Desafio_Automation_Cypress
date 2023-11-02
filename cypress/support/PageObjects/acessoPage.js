@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-import signElements from "../Elements/signElements"
-
 class AcessoPage {
 
     go() {
