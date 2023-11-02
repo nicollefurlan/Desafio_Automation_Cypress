@@ -1,27 +1,12 @@
-name: Cypress Regression Tests
-
+name: End-to-end tests 🧪
 on: [push]
-
 jobs:
-  setup-for-frontend-integration-tests:
-    name: Set up for frontend tests
-    runs-on: ubuntu-latest
-    container:
-      image: cypress/browsers:node16.5.0-chrome94-ff93
-      options: --user 1001  # ← THIS IS THE IMPORTANT LINE!
-     strategy:
-      fail-fast: false
+  cypress-run:
+    runs-on: macos-11
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-      - name: 'UI Tests - Chrome'
+        uses: actions/checkout@v6
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
         uses: cypress-io/github-action@v6
-        with:
-          install-command: yarn install
-          wait-on: ${{ secrets.BASE_URL }}
-          wait-on-timeout: 120
-          browser: chrome
-          record: true
-          group: 'UI - Chrome'
-          spec: cypress/integration/*
-
