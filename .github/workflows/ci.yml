@@ -1,29 +1,26 @@
+name: Cypress Regression Tests
+
+on: [push]
+
 jobs:
-  install:
+
+  ui-chrome-tests:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node16.5.0-chrome94-ff93
+    container: cypress/browsers:node18.12.0-chrome107
+    options: --user 1001  # ← THIS IS THE IMPORTANT LINE!
     steps:
-      # Checkout the branch.
       - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Reclaim cache directory
-        run: chown -R 1001:1001 /github/home/.cache && echo "pwn dat cache"
-
-      # install Cypress, run lint and build
-      - name: Cypress install
-        uses: cypress-io/github-action@v2  # <----- This is where mine fails, when cypress is installing
+        uses: actions/checkout@v4
+      - name: 'UI Tests - Chrome'
+        uses: cypress-io/github-action@v6
         with:
-          runTests: false
-      - run: yarn cypress info
-      - run: node -p 'os.cpus()'
-      - run: yarn lint
-      - run: yarn build
-
-      # Upload build artifacts
-      - name: Save build folder
-        uses: actions/upload-artifact@v2
-        with:
-          name: build
-          if-no-files-found: error
-          path: build
+          install-command: yarn install
+          wait-on: ${{ secrets.BASE_URL }}
+          wait-on-timeout: 120
+          browser: chrome
+          record: true
+          group: 'UI - Chrome'
+          spec: cypress/integration/*
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
