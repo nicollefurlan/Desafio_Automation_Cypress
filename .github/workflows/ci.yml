@@ -1,17 +1,11 @@
-name: Summary titles
+name: Chrome headed
 on: push
 jobs:
-  tests:
+  cypress-run:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - name: Cypress headless tests
-        uses: cypress-io/github-action@v6
+      - uses: cypress-io/github-action@v6
         with:
-          summary-title: 'Headless'
-      - name: Cypress headed tests
-        uses: cypress-io/github-action@v6
-        with:
-          install: false
+          browser: chrome
           headed: true
-          summary-title: 'Headed'
