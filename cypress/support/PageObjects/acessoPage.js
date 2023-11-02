@@ -1,0 +1,16 @@
+/// <reference types="Cypress" />
+
+import signElements from "../Elements/signElements"
+
+class AcessoPage {
+
+    go() {
+        //acessa a página
+        cy.visit('/')
+        cy.title().should('be.equal', 'nopCommerce demo store. Register')
+
+    }
+
+}
+
+export default new AcessoPage()

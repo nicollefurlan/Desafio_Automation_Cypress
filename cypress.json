@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://demo.nopcommerce.com/register?returnUrl=%2F",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "defaultCommandTimeout": 10000
+}
