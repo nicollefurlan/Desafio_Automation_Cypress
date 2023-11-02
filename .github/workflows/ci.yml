@@ -1,4 +1,5 @@
 name: Execução automação de testes
+on:
 jobs:
   test:
     name: Cypress run
