@@ -6,7 +6,7 @@ jobs:
 
   ui-chrome-tests:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node18.12.0-chrome107
+    image: cypress/browsers:node16.5.0-chrome94-ff93
     options: --user 1001  # ← THIS IS THE IMPORTANT LINE!
     steps:
       - name: Checkout
