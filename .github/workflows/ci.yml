@@ -1,15 +1,11 @@
-name: Chrome
+name: Chrome headed
 on: push
 jobs:
-  chrome:
-    runs-on: ubuntu-20.04
+  cypress-run:
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v2
+      - uses: actions/checkout@v4
+      - uses: cypress-io/github-action@v6
         with:
           browser: chrome
-        - name: Save state
-run: echo "{name}={value}" >> $GITHUB_STATE
-
-- name: Set output
-run: echo "{name}={value}" >> $GITHUB_OUTPUT
+          headed: true
