@@ -1,7 +1,7 @@
 
 import acessoPage from '../PageObjects/acessoPage'
 
-Given(/^que acesso a página de registro do site Nopcommerce$/, () => {
+Given(/^que acesso a pagina de registro do site Nopcommerce$/, () => {
 	acessoPage.go()
 });
 
