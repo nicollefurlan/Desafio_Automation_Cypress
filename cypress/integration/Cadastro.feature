@@ -27,4 +27,3 @@ Feature: Cadastro de usuário no site nopcommerce
         Given que acesso a página de registro do site Nopcommerce
         When clico no botão registrar
         Then verifico retorno de mensagem de erros
-
