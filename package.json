@@ -19,7 +19,7 @@
     "Cucumber",
     "Allure"
   ],
-  "author": "Fernando Hessel",
+  "author": "Nicolle Furlan",
   "license": "MIT",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.28.4",
