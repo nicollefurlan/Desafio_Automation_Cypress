@@ -4,7 +4,7 @@ Feature: Cadastro de usuário no site nopcommerce
     Como usuário acesso a página de registro, 
     eu gostaria de efetuar um novo cadastro
     para criar cadastro no site
-
+      
     Scenario: Efetuar cadastro de usuário inserindo somente campos obrigatórios
         Given que acesso a página de registro do site Nopcommerce
         When preencho o formulario somente com dados obrigatorios
