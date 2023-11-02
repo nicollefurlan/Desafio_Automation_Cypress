@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+        name: Reclaim cache directory
+        run: chown -R 1001:1001 /github/home/.cache && echo "pwn dat cache"
       - name: 'UI Tests - Chrome'
         uses: cypress-io/github-action@v6
         with:
