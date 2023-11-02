@@ -3,11 +3,12 @@ name: Cypress Regression Tests
 on: [push]
 
 jobs:
-
-  ui-chrome-tests:
+  setup-for-frontend-integration-tests:
+    name: Set up for frontend tests
     runs-on: ubuntu-latest
-    image: cypress/browsers:node16.5.0-chrome94-ff93
-    options: --user 1001  # ← THIS IS THE IMPORTANT LINE!
+    container:
+      image: cypress/browsers:node16.5.0-chrome94-ff93
+      options: --user 1001  # ← THIS IS THE IMPORTANT LINE!
     steps:
       - name: Checkout
         uses: actions/checkout@v4
