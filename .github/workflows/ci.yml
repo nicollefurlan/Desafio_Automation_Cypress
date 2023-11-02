@@ -1,5 +1,11 @@
 name: Execução automação de testes
 on:
+  workflow_dispatch:
+    inputs:
+      browser:
+        description: 'Selecionar algum destes browsers: chrome / electron'
+        required: false
+        default: 'chrome'
 jobs:
   test:
     name: Cypress run
