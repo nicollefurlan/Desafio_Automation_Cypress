@@ -11,6 +11,6 @@ jobs:
         env:
           DEBUG: "cypress:*"
         with:
-          # start: npm start
+          start: npm start
           command: npx cypress run
           # command: npx cypress run --browser chrome --spec 'cypress/e2e/**/*.feature'
