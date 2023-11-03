@@ -1,0 +1,1 @@
+[{"uid":"1ef9aa8608bb0b61","name":"Login inválido","time":{"start":1698905154716,"stop":1698905158118,"duration":3402},"status":"passed","severity":"normal"},{"uid":"42c6b2af8c33306","name":"Login com sucesso","time":{"start":1698905147152,"stop":1698905154671,"duration":7519},"status":"passed","severity":"normal"}]
