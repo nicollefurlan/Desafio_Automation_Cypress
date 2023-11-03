@@ -1,9 +1,3 @@
-All the tests run successfully locally with the command npx cypress run. But the same tests fail in GitHub Actions with this error:
-
-AssertionError: Timed out retrying after 4000ms
-
-Appreciate your help. Please find the workflows yml file below:
-
 name: E2e Tests
 on: [push]
 jobs:
