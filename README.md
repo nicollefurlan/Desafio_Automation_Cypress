@@ -17,7 +17,9 @@ npx cypress run
 npx cypress open
 
 Para executar allure report executar o comando:
+npx cypress run --config video=false --env allure=true
 allure generate allure-results
+allure open allure-report
 
 ### 🔩 Analise da implementação
 

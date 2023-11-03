@@ -1,3 +1,5 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Nov 02 03:05:54 GMT-03:00 2023","Thu Nov 02 03:05:58 GMT-03:00 2023","3402","","Login no site My Store","","","","Login inválido",""
-"passed","Thu Nov 02 03:05:47 GMT-03:00 2023","Thu Nov 02 03:05:54 GMT-03:00 2023","7519","","Login no site My Store","","","","Login com sucesso",""
+"passed","Fri Nov 03 01:56:37 GMT-03:00 2023","Fri Nov 03 01:56:41 GMT-03:00 2023","4124","","Cadastro de usuario no site nopcommerce","","","","Efetuar validação de erro ao inserir email inválido",""
+"passed","Fri Nov 03 01:56:22 GMT-03:00 2023","Fri Nov 03 01:56:30 GMT-03:00 2023","7442","","Cadastro de usuario no site nopcommerce","","","","Efetuar cadastro de usuario inserindo somente campos obrigatorios",""
+"passed","Fri Nov 03 01:56:30 GMT-03:00 2023","Fri Nov 03 01:56:37 GMT-03:00 2023","6528","","Cadastro de usuario no site nopcommerce","","","","Efetuar cadastro de usuário inserindo todos os campos do formulário",""
+"passed","Fri Nov 03 01:56:41 GMT-03:00 2023","Fri Nov 03 01:56:44 GMT-03:00 2023","3207","","Cadastro de usuario no site nopcommerce","","","","Efetuar validação de erros ao submeter formulário vazio",""
